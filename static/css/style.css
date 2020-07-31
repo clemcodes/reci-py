@@ -1,0 +1,297 @@
+body{
+    font-family: Helvetica, sans-serif;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("/static/images/food_bg.jpeg") no-repeat center center fixed;
+    background-size: cover;
+    max-height:80%;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  padding-top: 3%;
+  min-height: 70px;
+}
+
+.intro-container {
+  width:90%;
+  margin:0 auto;
+}
+
+.branding {
+  float: left;
+}
+
+.intro-container *{
+    color:#fff;
+}
+
+.branding h1 {
+  font-weight: normal;
+}
+
+
+nav {
+  float: right;
+}
+
+.navbar {
+  margin-top: 15%;
+}
+
+.navbar li {
+  display: inline-block;
+  padding: 0 5px;
+}
+
+.navbar li a {
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: normal;
+}
+
+.navbar li a:hover, .navbar .current a {
+  color: #fff;
+}
+
+main {
+  text-align:right;
+  margin-top:4%;
+  margin-bottom:150px;
+  padding:2% 10%;
+
+}
+
+main h1 {
+  font-size: 60px;
+  margin-bottom:20px;
+}
+
+main p {
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+.search-box input{
+    padding:10px;
+    font-size:15px;
+    color:black !important;
+    width:220px;
+    border:none;
+    border-radius:8px;
+
+}
+
+.search-box input:focus{
+    outline:none;
+}
+
+button{
+    width:90px;
+    padding:12px;
+    background:#f99a98;
+    border:none;
+    border-radius:8px;
+
+}
+
+button:hover{
+    cursor:pointer;
+    background:#ea6d6b;
+
+}
+
+button:focus{
+    outline:none;
+}
+
+
+.diet-option{
+    margin:10px;
+}
+
+.small-font{
+    font-size:12px;
+}
+
+.small-dot{
+    width:10px;
+
+}
+/* recipe page */
+
+
+
+.recipe-container{
+    width:85%;
+    display:flex;
+    flex-direction:column-reverse;
+    flex-wrap:wrap;
+    align-items:flex-end;
+}
+
+.recipe-container *{
+    color:gray;
+    font-size:16px;
+}
+
+.recipe {
+  width: 300px;
+  overflow: auto;
+  background-color:white;
+  opacity:0.7;
+  padding: 2% 3%;
+  margin: 1% 0;
+  border-radius:5px;
+}
+
+
+.image {
+  display: inline-block;
+  vertical-align: middle;
+  width: 32%;
+  min-width: 100px;
+  margin: 0 auto;
+}
+
+.details {
+  display: inline-block;
+  vertical-align: middle;
+  width: 60%;
+  margin: -1% auto;
+  padding: 2%;
+}
+
+.name, .source{
+  color: black;
+  text-align: left;
+}
+
+.source {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.source {
+  margin: 0;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* Contact Page */
+
+
+.about-container{
+    background-color:rgba(255,255,255,0.2);
+    width:40%;
+    padding:3% 4%;
+    margin:1% 7% 3% 2%;
+    border-radius:5%;
+    color:white;
+    float:right;
+}
+
+.about-container *{
+    color:white;
+    font-size:14.5px;
+}
+
+ul li {
+    padding-bottom:10px;
+}
+
+
+.social-menu{
+    clear:right;
+}
+
+.social-menu ul{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.social-menu ul li{
+  list-style: none;
+  margin: 0 15px;
+}
+
+.social-menu ul li .fa{
+  font-size: 25px;
+  line-height: 45px;
+  transition: .6s;
+  color: #FA4359;
+}
+
+.social-menu ul li a{
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.2);
+  text-align: center;
+  transition: 0.6s;
+  box-shadow: 0 5px 4px rgba(0,0,0,0.2);
+}
+
+.social-menu ul li a:hover{
+  transform:translate(0,-10px)
+}
+
+
+footer {
+  width: 100%;
+  text-align: center;
+  bottom: 0;
+  position: static;
+  color:#fff;
+  clear:right;
+}
+
+footer p{
+    font-size:12px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .about-container{
+        width:80%;
+        margin:3% 7% 5% 2%;
+    }
+
+    main p {
+      font-size: 13px;
+
+    }
+
+    main {
+      margin-top:15%;
+      margin-bottom:200px;
+    }
+
+    .options{
+        text-align:right;
+    }
+
+    .small-font{
+        font-size:7px;
+
+    }
+
+    .small-dot{
+        width:7px;
+
+    }
+
+    .about-container{
+    margin:10% 7% 10% 2%;
+    }
+
+    .social-menu{
+    margin-bottom:10%;
+    }
+
+
+}

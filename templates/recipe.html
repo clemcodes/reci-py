@@ -1,0 +1,47 @@
+{% include "header.html" %}
+
+    <main style="margin-bottom:40px;margin-top:3%">
+        <section class="intro-container">
+            <h1>Try ReciPy!</h1>
+            <p style="margin-bottom:1px;">Type an ingredient in your fridge to find recipe ideas</p>
+            <p style="font-size:12px;margin-top:5px;">(Use space between *multiple* ingredients)</p>
+            <form action="/recipe">
+                <div class="search-box">
+                    <input type="text" placeholder="e.g. mushroom tomato" name="ingredient">
+                    <button type="submit"><i class="fa fa-search"></i> Search</button>
+                </div>
+                <div class="options">
+                    <div class="diet-option">
+                        <span class="small-font">I am a...</span>
+                        <input class="small-dot" type="radio" id="vegan" name="health" value="vegan" checked><label class="small-font" for="vegan">Vegan</label>
+                        <input class="small-dot" type="radio" id="vegetarian" name="health" value="vegetarian"><label class="small-font" for="vegetarian">Vegetarian</label>
+                        <input class="small-dot" type="radio" id="everything" name="health" value="all"><label class="small-font" for="everything">I eat everything</label>
+                    </div>
+                    <div class="preference">
+                        <span class="small-font">I want something...</span>
+                        <input class="small-dot" type="radio" id="easy" name="preference" value="easy"><label class="small-font" for="easy">quick and easy!</label>
+                        <input class="small-dot" type="radio" id="balanced" name="preference" value="balanced"><label class="small-font" for="balanced">well-balanced!</label>
+                        <input class="small-dot" type="radio" id="no-pref" name="preference" value="no-pref" checked><label class="small-font" for="no-pref">No preference</label>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+
+
+
+    <div class="recipe-container" style="margin-bottom:80px">
+        {% for hit in hits %}
+      <div class="recipe">
+          <a href="{{hit.recipe.url}}" target="_blank"><img class="image" src="{{hit.recipe.image}}"></a>
+          <section class="details">
+            <h2 class="name"><a href="{{hit.recipe.url}}" target="_blank">{{hit.recipe.label}}</a></h2>
+            <p class="source">{{hit.recipe.source}}</p>
+          </section>
+      </div>
+        {% endfor %}
+    </div>
+
+
+
+{% include "footer.html" %}
