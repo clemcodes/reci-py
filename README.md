@@ -2,7 +2,7 @@
 
 A web app that uses Python to quickly find recipes according to the ingredients in your fridge, with vegan/vegetarian options, adapted to your needs.
 
-![showcase](/static/images/display.png)
+![showcase](/static/images/recipy-showcase.png)
 
 * Runs on Flask server
 * Uses Edamam API
